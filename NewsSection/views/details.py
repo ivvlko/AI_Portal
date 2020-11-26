@@ -1,7 +1,11 @@
 from django.shortcuts import render
+<<<<<<< HEAD
 
 from NewsSection.forms import CommentForm
 from NewsSection.models import News, Comment
+=======
+from NewsSection.models import News
+>>>>>>> 10c795f36d23a00f8ab4fec4346b45eac822fd47
 
 
 def details_view(request, pk):
@@ -9,6 +13,7 @@ def details_view(request, pk):
     if request.method == 'GET':
         context = {
             'current': current_news,
+<<<<<<< HEAD
             'form': CommentForm(),
             'comments': Comment.objects.all().filter(news_id=pk).order_by('-date_posted')
         }
@@ -30,3 +35,7 @@ def details_view(request, pk):
             'comments': Comment.objects.all().filter(news_id=pk).order_by('-date_posted')
         }
         return render(request, 'news/details.html', context)
+=======
+        }
+        return render(request, 'news/details.html', context)
+>>>>>>> 10c795f36d23a00f8ab4fec4346b45eac822fd47

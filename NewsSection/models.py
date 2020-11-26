@@ -1,19 +1,34 @@
 from django.contrib.auth.models import User
+<<<<<<< HEAD
 from django.core.validators import MinLengthValidator
 from django.db import models
 import django.utils.timezone
 
 from NewsSection.validators import only_english_validator
 
+=======
+from django.db import models
+import django.utils.timezone
+
+>>>>>>> 10c795f36d23a00f8ab4fec4346b45eac822fd47
 
 class News(models.Model):
     choices = [['Computer Vision and Images', 'Computer Vision and Images'],
                ['Natural Language Processing', 'Natural Language Processing'],
                ['Robotics', 'Robotics'],
+<<<<<<< HEAD
                ]
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=50, validators=[only_english_validator])
     text = models.TextField(max_length=3000, validators=[only_english_validator, MinLengthValidator(100)])
+=======
+               ['Hardware and Innovations', 'Hardware and Innovations']
+               ]
+
+    title = models.CharField(max_length=50)
+    text = models.TextField(max_length=3000)
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
+>>>>>>> 10c795f36d23a00f8ab4fec4346b45eac822fd47
     category = models.CharField(max_length=50, choices=choices)
     img_url = models.URLField()
     date_posted = models.DateTimeField(default=django.utils.timezone.now)
@@ -22,6 +37,7 @@ class News(models.Model):
         return f'{self.title} by {self.author} posted on {self.date_posted}'
 
 
+<<<<<<< HEAD
 class Comment(models.Model):
     name = models.CharField(max_length=50, validators=[only_english_validator])
     comment = models.TextField(max_length=500, validators=[only_english_validator])
@@ -30,3 +46,5 @@ class Comment(models.Model):
 
     def __str__(self):
         return f'By {self.name} on {self.date_posted}'
+=======
+>>>>>>> 10c795f36d23a00f8ab4fec4346b45eac822fd47
