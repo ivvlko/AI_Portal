@@ -1,0 +1,56 @@
+{% extends 'shared/base.html' %}
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/face_detection.css' %}">
+{% endblock %}
+
+{% block title %}
+    Face Protection
+{% endblock %}
+
+{% block content %}
+    <div class="wrap_all">
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-danger" role="alert">
+                    {{ message }}
+                </div>
+            {% endfor %}
+
+        {% endif %}
+        <ol>
+            <li><h3>Select Your Picture - JPG/PNG only; Up To 5 MB</h3></li>
+            <li><h3>Adjust Strength According to Your Pic</h3></li>
+
+        </ol>
+        <div class="content_test">
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <ul>
+                    <li><label for="picture">Picture:</label>
+                        {{ form.picture }}
+                    </li>
+
+                     <li><label for="picture">Strength:</label>
+                        {{ form.strength }}
+                    </li>
+
+                    <li>
+                        <button type="submit">Submit</button>
+                    </li>
+                </ul>
+                {% if score|length > 0 %}
+                    <div class="result">
+                        <h2>Your Result:</h2>
+                        <img class="imgs" src="{% static 'processed/pic2.jpg' %}" alt="">
+                    </div>
+                {% else %}
+                    <div class="result">
+                        <img class="imgs" id="img_placeholder" src="{% static 'pics/placeholder.png' %}" alt="">
+                    </div>
+                {% endif %}
+            </form>
+        </div>
+    </div>
+{% endblock %}

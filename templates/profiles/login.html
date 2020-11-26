@@ -1,0 +1,48 @@
+{% extends 'shared/base.html' %}
+{% load crispy_forms_filters %}
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+{% endblock %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+{% block content %}
+    {% if request.user.is_authenticated %}
+        <h1 style="font-size: 500%; margin-top: 10%">You are Already Logged In</h1>
+        <h1 style="font-size: 500%; margin-top: 10%"><a href="{% url 'logout_url' %}">Click Here</a> To Logout</h1>
+    {% else %}
+        <h1>Sign In</h1>
+
+        <div id="sign_in_container">
+            <form method="post">
+
+                {% csrf_token %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert alert-{{ message.tags }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+
+                {% endif %}
+                <div class="register_form">
+
+                    {{ form|crispy }}
+                    <div class="form-group">
+                        <button class="btn btn-outline-info" type="submit"> Login</button>
+                    </div>
+                    <div class="border-top pt-3">
+                        <small class="text-muted">
+                            Do You Need An Account? <a class="ml-2" href="{% url 'register_url' %}">Sign Up</a>
+                        </small>
+                    </div>
+                </div>
+            </form>
+        </div>
+    {% endif %}
+
+{% endblock %}

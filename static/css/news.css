@@ -1,0 +1,88 @@
+body{
+    background-color: black;
+}
+
+div.news_section{
+    width: 100%;
+}
+
+img.img_section{
+    height: 250px;
+    width: 100%;
+
+}
+
+div.wrapper_section{
+    display: inline-block;
+    width: 33%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 1%;
+    padding: 5%;
+    top: 0;
+}
+
+h1{
+    text-align: center;
+    color: #a4d3c0;
+    margin-top: 10px;
+}
+
+h3{
+    color: #6b6fc0;
+}
+
+p{
+    color: floralwhite;
+    word-wrap: break-word;
+}
+
+p.by_author{
+    font-size: smaller;
+}
+
+a.detail_button{
+    font-size: x-large;
+    border-radius: 50%;
+    color: white;
+    background-color: darkblue;
+}
+
+#add_button{
+    margin: 10px;
+    font-size: 150%;
+    text-align: center;
+    border: mediumpurple solid;
+    background-color: #6b6fc0;
+    color: whitesmoke;
+    font-family: "Century Schoolbook L";
+}
+
+#add_news_form{
+    width: 50%;
+    margin: 0 auto;
+}
+
+label{
+    color: cyan;
+}
+
+button{
+    background-color: rebeccapurple;
+    color: palegoldenrod;
+    font-size: 150%;
+    font-family: "Century Schoolbook L";
+}
+
+#no_content_pic{
+    display: block;
+    width: 45.5%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+div.paginator{
+    width: 35%;
+    margin: 0 auto;
+}

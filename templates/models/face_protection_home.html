@@ -1,0 +1,45 @@
+{% extends 'shared/base.html' %}
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/models.css' %}">
+{% endblock %}
+
+{% block title %}
+    Face Protection - Home
+{% endblock %}
+
+{% block content %}
+    <div class="button_div"><a class="test_button" href="{% url 'actual_face_protection_url' %}">Try It</a></div>
+
+
+    <div class="content_description">
+        <h2>Hide Faces</h2>
+        <p>Another Cascade Machine Learning Model. This One Hides Faces Instead of Showing Them and it is
+            Probably even More Used Than the Previous one.
+            <br>
+            <br>
+            This One is Very Similar to The One in Face Detection but It's Implemented in Skimage
+            which Is a Native Python Library for Image Processing unlike OpenCV that is written in
+            C++ and supports Java, Python, Matlab and C.
+            <br>
+            <br>
+            <img id='haar_pic' src="{% static 'pics/hiding.png' %}" alt="broken">
+            <br>
+            <br>
+            The Algorithm is The Same with One Exception:
+            <br>
+            <br>
+            Here When we Locate the Faces We don't draw Rectangles Around Them We Use
+            Gaussian Filter on the results and this way Rewrite the entire Image.
+            Keep That In Mind - Gaussian Filter is Another Ml Algorithm that Needs to Process
+            the Data. This Will Make It Significantly slower Than the Face Detection.
+            <br>
+            <br>
+            Link For a Notebook with Some typical Skimage exercises <a
+                    href="https://github.com/ivvlko/Image-Processing---DataCamp-exercises">this
+                link</a>
+
+        </p>
+
+    </div>{% endblock %}

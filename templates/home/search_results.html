@@ -1,0 +1,31 @@
+{% extends 'shared/base.html' %}
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/news.css' %}">
+{% endblock %}
+
+{% block title %}
+    Search - Results
+{% endblock %}
+
+{% block content %}
+    <h1>Results:</h1>
+    {% if object_list %}
+        {% for object in object_list %}
+            <div class="wrapper_section">
+                <div class="news_section">
+                    <img class="img_section" src="{{ object.img_url }}" alt="No Image Available">
+                    <a href="{% url 'details' object.pk %}"><h3>{{ object.title }}</h3></a>
+                    <p> {{ object.text|slice:":200" }}...</p>
+                    <p class="by_author"> by {{ object.author }} posted on {{ object.date_posted }}</p>
+                    <a class="btn btn-primary" href="{% url 'details' object.pk %}">Details</a>
+                </div>
+            </div>
+
+        {% endfor %}
+    {% else %}
+        <img id="no_content_pic" src="{% static 'pics/no_content.jpg' %}" alt="">
+    {% endif %}
+
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'shared/base.html' %}
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/news.css' %}">
+{% endblock %}
+
+{% block title %}
+    Computer Vision and Image Processing
+{% endblock %}
+
+{% block content %}
+    {% include 'shared/add_news_button.html' %}
+    <h1>Latest in Computer Vision and Image Processing</h1>
+    {% if not news %}
+        <img id="no_content_pic" src="{% static 'pics/no_content.jpg' %}" alt="">
+    {% else %}
+        {% for news in news %}
+            <div class="wrapper_section">
+                <div class="news_section">
+                    <img class="img_section" src="{{ news.img_url }}" alt="No Image Available">
+                    <a href="{% url 'details' news.pk %}"><h3>{{ news.title }}</h3></a>
+                    <p> {{ news.text|slice:":200" }}...</p>
+                    <p class="by_author"> by {{ news.author }} posted on {{ news.date_posted }}</p>
+                    <a href="{% url 'details' news.pk %}">
+                        <button type="button" class="btn btn-primary">Details</button>
+                    </a>
+                    {% include 'shared/edit_button.html' %}
+                    {% include 'shared/delete_button.html' %}
+
+                </div>
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    <div class="paginator">
+        {% include 'shared/paginator.html' %}
+    </div>
+{% endblock %}
+

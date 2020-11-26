@@ -1,0 +1,32 @@
+{% extends 'shared/base.html' %}
+{% load static %}
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/update_delete.css' %}">
+{% endblock %}
+
+{% block title %}
+    Delete News
+{% endblock %}
+
+{% block content %}
+    {% if user == current.author and user.is_authenticated %}
+
+
+        <h1 id="delete_h">Are You Sure You Want To Delete: {{ current.title }}</h1>
+        <form method="post">
+            {% csrf_token %}
+            <div class="button_section">
+                <button id="back_button" type="button" class="btn btn-primary" value="Back"
+                        onclick="window.history.back()">
+                    Back
+                </button>
+
+                <button id="delete_button" type="submit" class="btn btn-danger">Delete</button>
+            </div>
+        </form>
+    {% else %}
+        <h1 class="delete">Value The Private Property</h1>
+        <h1 class="delete">This is Not Your Post to Edit</h1>
+        <h1 class="delete">Please, Go <a href="{% url 'home_url' %}">Back</a></h1>
+    {% endif %}
+{% endblock %}

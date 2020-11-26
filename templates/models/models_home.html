@@ -1,0 +1,42 @@
+{% extends 'shared/base.html' %}
+{% load static %}
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/models.css' %}">
+{% endblock %}
+
+{% block title %}
+    AI Models
+{% endblock %}
+
+{% block content %}
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <h1>Actual Artificial Intelligence</h1>
+    <div id="wrapper">
+        <div id="sidenav" class="sidenav">
+            <h2>AI Models:</h2>
+            <a href="{% url 'face_detection_url' %}">Face Detection</a>
+            <a href="{% url 'face_protection_url' %}">Face Protection</a>
+            <a href="{% url 'spam_filter_url' %}">Spam Filter</a>
+            <a href="{% url 'movie_reviewer_url' %}">Movies Reviews Sentiment</a>
+            <a href="{% url 'user_models_url' %}">Send Your Model</a>
+        </div>
+
+        <div id="main_container" class="main_container">
+            <h2>Content: </h2>
+
+            <img class="img_content" src="{% static 'pics/picc' %}" alt="">
+            <img class="img_content" src="{% static 'pics/pic.jpg' %}" alt="">
+
+        </div>
+    </div>
+
+{% endblock %}
+

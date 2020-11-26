@@ -1,0 +1,39 @@
+{% extends 'shared/base.html' %}
+{% load static %}
+{% load crispy_forms_filters %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/spam_filter.css' %}">
+{% endblock %}
+
+{% block title %}
+    Spam Filter
+{% endblock %}
+
+
+{% block content %}
+    <div class="wrap_all">
+        <h2>Enter The Email/SMS</h2>
+        <form method="post" id="spam_form">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <button type="submit">Submit</button>
+        </form>
+
+        {% if result == 1 %}
+            <div class="result">
+                <h2>Your Result:</h2>
+                <img class="imgs" src="{% static 'pics/spam_warn.jpg' %}" alt="">
+            </div>
+        {% elif result == 0 %}
+            <div class="result">
+                <h2>Your Result:</h2>
+                <img class="imgs" src="{% static 'pics/all_good.gif' %}" alt="">
+            </div>
+        {% else %}
+            <div class="result">
+                <img class="imgs" id="img_placeholder" src="{% static 'pics/tenor.gif' %}" alt="">
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}

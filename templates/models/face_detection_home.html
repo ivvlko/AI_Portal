@@ -1,0 +1,58 @@
+{% extends 'shared/base.html' %}
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/models.css' %}">
+{% endblock %}
+
+{% block title %}
+    Face Detection - Home
+{% endblock %}
+
+
+{% block content %}
+    <div class="button_div"><a class="test_button" href="{% url 'actual_face_detection_url' %}">Try It</a></div>
+
+
+    <div class="content_description">
+        <h2>Haar Cascade</h2>
+        <p>Object Detection using Haar feature-based cascades is one of the oldest,
+            but most effective algorithms. It's got a Machine Learning based approach where the cascade
+            function is trained with a lot of positive and negative images and then its used to detect
+            the object in new environment but by heart is a brute force algorithm.
+            <br>
+            <br>
+            After we receive the tons of examples of positive and negative images,
+            then we need to extract features from it.
+            For this, haar features shown in below image are used.
+            They are just like our convolutional kernel.
+            Each feature is a single value obtained by subtracting sum of pixels under white rectangle
+            from sum of pixels under black rectangle.
+            <br>
+            <br>
+            <img id='haar_pic' src="{% static 'pics/haar_features.jpg' %}" alt="broken">
+            <br>
+            <br>
+            Why I called it Brute force algorithm? Here's the explanation coming from OpenCV Library:
+            <br>
+            <br>
+            Now all possible sizes and locations of each kernel is used to calculate plenty of features.
+            (Just imagine how much computation it needs?
+            Even a 24x24 window results over 160000 features).
+            For each feature calculation, we need to find sum of pixels under white and black rectangles.
+            To solve this, they introduced the integral images.
+            It simplifies calculation of sum of pixels, how large may be the number of pixels, to an operation involving
+            just four pixels.
+            Nice, isn’t it? It makes things super-fast.
+            <br>
+            <br>
+            For thorough explanation check <a
+                    href="https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_objdetect/py_face_detection/py_face_detection.html">this
+                link</a>
+
+        </p>
+
+    </div>
+
+
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends 'shared/base.html' %}
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/models.css' %}">
+{% endblock %}
+
+{% block title %}
+    Movie Reviewer - Home
+{% endblock %}
+
+
+{% block content %}
+    <div class="button_div"><a class="test_button" href="{% url 'actual_movie_reviewer_url' %}">Try It</a></div>
+
+
+    <div class="content_description">
+        <h2>Movie Reviewer</h2>
+        <p>Another AI Model Constructed for Natural Language Processing Task. This One Classifies The Movie Reviews
+            Based on Being Positive or Negative. It's Useful Tool for Assessing The Comments/Tweets on Social Media
+            or Posts on Different Forums. You Can't Have a Man Dealing With All the Data by Himself This is Where Artificial
+            Intelligence comes in handy.
+            <br>
+            <br>
+            This Is a Good Example of The Wide Range of Applications of the NLP. It's Used For gathering
+            Information about Product, Movies, Politicians, Books and Magazines etc.
+            <br>
+            <br>
+            <img id='haar_pic' src="{% static 'pics/review.png' %}" alt="broken">
+            <br>
+            <br>
+            Usually the Best Performers on That Sort of Tasks are the Neural Networks. For The Purpose of This Site
+            I will Use the Simplest and Easiest Model For Classification - Logistic Regression.
+            <br>
+            <br>
+            Even Tho it's the Simplest and among the Fastests Algorithm, Logistic Regression's also a Very Underrated One.
+            With Good Knowledge of The Data, thorough Preprocessing and Smart Hyperparameter Tuning even With Logistic Regression
+            We were Able to Achieve 90% Accuracy. It Took Less Than a Minute to Make the Parameter Tuning, Train the Model and Export It.
+            <br>
+            <br>
+            Original dataset is on  <a href="https://www.kaggle.com/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews">this link</a>
+            <br>
+            <a href="https://paperswithcode.com/sota/sentiment-analysis-on-imdb">Here</a> I Apply The Best Models on This Particular Dataset
+
+        </p>
+
+    </div>
+
+
+{% endblock %}

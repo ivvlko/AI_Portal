@@ -1,0 +1,55 @@
+{% extends 'shared/base.html' %}
+{% load static %}
+{% load crispy_forms_filters %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/models.css' %}">
+{% endblock %}
+
+
+{% block title %}
+    Spam Filter Explained
+{% endblock %}
+
+{% block content %}
+    <div class="button_div"><a class="test_button" href="{% url 'actual_spam_filter_url' %}">Try It</a></div>
+
+
+    <div class="content_description">
+        <h2>Spam Filter</h2>
+        <p> Filtering the Spam Messages in Your Emails is An Essential Part of the work of Every Good Email Account Provider.
+            This Model Here is Doing Exactly This - It Separates Spam from non-Spam Messages. It's trained on old data with SMS spam
+            messages but it still works relatively well in general.
+            <br>
+            <br>
+            If You Have Ever Been Working with Standard Machine Learning models You have Most Certainly Heard of an Algorithm
+            Called Support Vector Machines. This is a very Heavyweight, Slow but  Extremely Powerful Algorithm used Mostly for solving
+            problems that do not have large datasets.
+            <br>
+            <br>
+            <img id='haar_pic' src="{% static 'pics/spam.jpg' %}" alt="broken">
+            <br>
+            <br>
+            I didn't start this Project with the Idea to train SVM. It just Produced Better than the other models I've tried.
+            <br>
+            <br>
+            When it Comes to Spam Filtering there are two very Different Points of View - One that Prefers to Get More Spam Messages
+            but Almost Never Miss an Import One by Putting it in 'Spam' and the Other that would Gladly Open More Often 'Spam' but Not Letting
+            Any Garbage in the Main Section.
+            <br>
+            <br>
+            In My Research I was Able to Achieve Better Results with Different algorithms  in Terms of Not Letting Any Spam or Never
+            Putting a Real Message in 'Spam section'. But Overall Accuracy of the SVM was the Best. It Had 99% Accuracy on Training Data and
+            98.8% Accuracy on New Data. It Was The Most Balanced Model between the Two Points of View. Overall it was the best.
+            <br>
+            <br>
+            Check The Notebook I Wrote for The Research <a
+                    href="https://github.com/ivvlko/Spam_Detection/blob/main/spam_detection.ipynb">right here</a>
+            <br>
+            <br>
+            Credit To the Authors of The Original Dataset - <a href="https://archive.ics.uci.edu/ml/datasets/SMS+Spam+Collection">Click</a>
+
+        </p>
+
+    </div>
+{% endblock %}

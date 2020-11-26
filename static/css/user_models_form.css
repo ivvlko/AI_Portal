@@ -1,0 +1,35 @@
+body{
+    background-color: black;
+}
+
+div.form_sec{
+    width: 50%;
+    margin: 0 auto;
+}
+
+h2{
+    color: wheat;
+    margin: 2%;
+}
+
+h4{
+    color: darkgrey;
+    margin: 1%;
+    padding: 1%;
+}
+
+label{
+    color: wheat;
+}
+
+ul{
+    color: white;
+}
+a{
+    text-decoration: none;
+}
+
+h3{
+    text-align: center;
+    color: wheat;
+}

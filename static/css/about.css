@@ -1,0 +1,44 @@
+body {
+    /*background-image: url("../pics/black.jpg");*/
+    background-color: black;
+}
+
+#wrapper {
+    height: 100%;
+}
+
+h2 {
+    text-align: center;
+    color: darkred;
+    padding: 10px;
+    font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+}
+
+#image_container {
+    display: inline-block;
+    position: absolute;
+}
+
+div.container {
+    display: inline-block;
+    margin-left: 300px;
+}
+
+#my_pic {
+    border-radius: 50%;
+    width: 300px;
+    height: 200px;
+
+}
+
+h3 {
+    color: gold;
+}
+
+p {
+    color: azure;
+}
+
+li{
+    color:azure;
+}

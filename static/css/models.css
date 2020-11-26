@@ -1,0 +1,108 @@
+h1 {
+    text-align: center;
+    color: #a4d3c0;
+    margin-top: 10px;
+}
+
+body {
+    background-color: black;
+}
+
+#sidenav {
+    height: 100%;
+    vertical-align: top;
+    width: 15%;
+    display: inline-block;
+    position: relative;
+    /*overflow-x: hidden;*/
+    padding-top: 20px;
+    margin-left: 5px;
+
+}
+
+
+.sidenav a {
+    padding: 8px 10px 8px 18px;
+    text-decoration: none;
+    font-size: 25px;
+    color: cyan;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: darkcyan;
+
+}
+
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+div.main_container {
+    display: inline-block;
+    position: relative;
+    width: 33%;
+    margin-left: 10%;
+}
+
+h2 {
+    color: wheat;
+}
+
+img.img_content {
+    width: 170%;
+    height: 170%;
+}
+
+#wrapper {
+    margin-top: 20px;
+}
+
+label {
+    color: white;
+
+}
+
+input {
+    color: white;
+}
+
+div.content_description {
+    position: relative;
+    text-align: center;
+    width: 35%;
+    margin-top: 1%;
+    margin-left: 27%;
+}
+
+p {
+    color: white;
+
+}
+
+#haar_pic {
+    max-height: 50%;
+    max-width: 50%;
+}
+
+a.test_button {
+    background-color: darkblue;
+    position: relative;
+    padding: 20px;
+    margin: 0;
+    border-radius: 20%;
+    font-size: 150%;
+    color: cyan;
+}
+
+div.button_div {
+    margin: 20px;
+    display: block;
+}

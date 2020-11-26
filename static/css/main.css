@@ -1,0 +1,135 @@
+.custom_nav_item {
+    color: #7FFFD4;
+    font-size: 150%;
+    text-decoration: darkblue;
+    margin: 5px;
+}
+
+.nav-link {
+    color: #7FFFD4;
+    font-size: 150%;
+    text-decoration: darkblue;
+    margin: 5px;
+    display: inline-block;
+}
+
+
+.navbar.navbar-default {
+    background-color: #0f0d25;
+}
+
+
+div.dropdown-menu {
+    background-color: #7FFFD4;
+}
+
+div.dropdown-class {
+    display: inline-block;
+    margin: 5px;
+    position: relative;
+}
+
+div.navbar-right {
+    margin-right: 5px;
+}
+
+
+h5.contact {
+    color: whitesmoke;
+}
+
+h6.contact {
+    color: pink;
+}
+
+.fa {
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+}
+
+div.social_media {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+div.contacts {
+    display: inline-block;
+    width: 33%;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+form.form-inline {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+div.about {
+    margin-top: 20px;
+    margin-left: 20px;
+
+}
+
+.about_link {
+    color: pink;
+    margin: 4px;
+}
+
+.feedback_link {
+    position: absolute;
+    top: 0;
+}
+
+
+#logout_button {
+    color: darkred;
+}
+
+
+#wrapper_footer {
+    position: relative;
+    min-height: 12.7vh;
+    background-color: #0f0d25;
+    margin-top: 8%;
+}
+
+div.wrapper {
+    display: inline-block;
+    margin: 30px;
+}
+
+#img_footer {
+    position: absolute;
+    top: 4%;
+    left: 0.5%;
+}
+
+div.contacts {
+    /*display: inline-block;*/
+    position: absolute;
+    left: -20px;
+    top: 48%;
+}
+
+#footer_banner {
+    margin-left: 40%;
+    display: inline-block;
+    opacity: 30%;
+
+    font-size: 300%;
+    color: cyan;
+    font-family: "aakar";
+    text-align: center;
+}
+
+#admin_button {
+    color: #5e60af;
+}
+
+a{
+    font-family: italic;
+    color: whitesmoke;
+}

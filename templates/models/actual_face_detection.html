@@ -1,0 +1,57 @@
+{% extends 'shared/base.html' %}
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/face_detection.css' %}">
+{% endblock %}
+
+{% block title %}
+    Face Detection
+{% endblock %}
+
+{% block content %}
+    <div class="wrap_all">
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-danger" role="alert">
+                    {{ message }}
+                </div>
+            {% endfor %}
+
+        {% endif %}
+        <ol>
+            <li><h3>Select Your Picture</h3></li>
+            <li><h3>Select Strength of the Model</h3></li>
+            <li><h3>NB! Adjust the Strength According to Your Pic. If it doesn't Find Anything - Boost It
+
+                By Increasing The Strength. If You Boost Too Much It will Find Faces Anywhere xD </h3></li>
+        </ol>
+        <div class="content_test">
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <ul>
+                    <li><label for="picture">Picture:</label>
+                        {{ form.picture }}
+                    </li>
+                    <li>
+                        <label for="strength">Strength:</label>
+                        {{ form.strength }}
+                    </li>
+                    <li>
+                        <button type="submit">Submit</button>
+                    </li>
+                </ul>
+                {% if score %}
+                    <div class="result">
+                        <h2>Your Result:</h2>
+                        <img class="imgs" src="{% static 'processed/pic.jpg' %}" alt="">
+                    </div>
+                {% else %}
+                    <div class="result">
+                        <img class="imgs" id="img_placeholder" src="{% static 'pics/placeholder.png' %}" alt="">
+                    </div>
+                {% endif %}
+            </form>
+        </div>
+    </div>
+{% endblock %}

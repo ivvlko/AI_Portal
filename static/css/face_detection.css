@@ -1,0 +1,48 @@
+body {
+    background-color: black;
+}
+
+label {
+    color: white;
+
+}
+
+input {
+    color: white;
+}
+
+div.wrap_all {
+    position: relative;
+    width: 50%;
+    margin: 20px auto 0;
+
+}
+
+h2 {
+    color: #fcf8cd;
+}
+
+li {
+    color: #a4d3c0;
+    margin: 10px;
+    padding: 10px;
+}
+
+#img_placeholder {
+    width: 500px;
+    height: 300px;
+
+}
+
+button {
+      background-color: blue;
+      position: relative;
+        padding: 5px;
+      color: wheat;
+
+}
+
+img.imgs {
+    max-height: 70%;
+    max-width: 65%;
+}

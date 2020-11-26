@@ -1,0 +1,49 @@
+body {
+    background-color: black;
+}
+
+div.wrapper_details {
+    width: 45%;
+    margin: 0 auto;
+}
+
+label {
+    color: white;
+}
+
+h2 {
+    text-align: center;
+    color: darkcyan;
+}
+
+h1 {
+    text-align: center;
+    color: cyan;
+    font-size: 300%;
+    margin-top: 17%;
+}
+
+#delete_h {
+    text-align: center;
+    color: darkred;
+    margin: 5%;
+}
+
+#back_button, #delete_button {
+    font-size: 200%;
+    width: 25%;
+    margin-left: 5%;
+    display: inline-block;
+}
+
+div.button_section {
+    margin-left: 25%;
+    margin-bottom: 24%;
+}
+
+h1.delete {
+    text-align: center;
+    color: cyan;
+    font-size: 300%;
+    margin: 8%;
+}

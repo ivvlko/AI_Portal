@@ -1,0 +1,6 @@
+{% if user.is_authenticated and user == news.author %}
+    <a href="{% url 'delete_url' news.pk %}">
+        <button class="btn btn-danger">Delete</button>
+    </a>
+
+{% endif %}

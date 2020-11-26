@@ -1,0 +1,34 @@
+body{
+    background-color: black;
+}
+
+div.wrap_all {
+    position: relative;
+    width: 50%;
+    margin: 20px auto 0;
+
+}
+label{
+    color: wheat;
+}
+
+button {
+      background-color: blue;
+      position: relative;
+        padding: 5px;
+      color: wheat;
+
+}
+
+h2{
+    color: cyan;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+img.imgs{
+    margin-left: 20%;
+    margin-top: 5%;
+    width: 50%;
+    height: 50%;
+}

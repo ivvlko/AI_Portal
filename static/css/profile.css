@@ -1,0 +1,42 @@
+#profile_img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+
+}
+body{
+    background-color: black;
+}
+
+h1{
+    color: #fcf8cd;
+}
+
+div.content_wrapper{
+    width: 40%;
+    display: inline-block;
+    margin: 50px;
+}
+
+label{
+    color: white;
+}
+
+div.activity_section{
+    width: 40%;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    margin: 30px;
+}
+
+h2{
+    color: royalblue;
+}
+
+h3.h3_message{
+    color: rebeccapurple;
+    margin: 10px;
+}
+

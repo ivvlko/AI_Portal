@@ -1,0 +1,49 @@
+{% extends 'shared/base.html' %}
+{% load static %}
+{% block title %}
+    About Me
+{% endblock %}
+
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock %}
+
+
+{% block content %}
+    <h2>Developer Info </h2>
+    <div id="image_container">
+        <img id="my_pic" src="{% static 'pics/me.jpeg' %}" alt="">
+    </div>
+    <div class="container">
+        <h3>About Me:</h3>
+        <p>Hi There, My Name is Ivan and I am Passionate about Programming and Artificial Intelligence, in particular Natural Language Processing. I created this website to try different things from Web Development with Django and test new Artificial Intelligence Models in production.</p>
+        <h3>Education:</h3>
+        <ul>
+            <li>Software University - Web Development with Python and Django</li>
+            <li>Software University - Artificial Intelligence - 4 Course specialization: Math Concepts, Data Science,
+                Machine and Deep Learning
+            </li>
+            <li>Sofia University - B.S. of Political Science and Government</li>
+            <li>Math High School Acad. Kiril Popov - Mathematics and Computer Science</li>
+        </ul>
+        <h3>Experience:</h3>
+        <ul>
+            <li>Data Operator - 12/2019 - 05/2020 in Tessi</li>
+            <li>Data Processing Specialist - 01/2019 - 11/2019 in SBTech</li>
+        </ul>
+        <h3>Skill Set:</h3>
+        <ul>
+            <li>Programming: Python, R, JavaScript, HTML, CSS</li>
+            <li>Web Frameworks: Django, Shiny</li>
+            <li>Data Science tools: Pandas, R, Plotly, Numpy, Matplotlib</li>
+            <li>Machine/Deep Learning technologies: TensorFlow, Keras, NLTk, Scikit Learn etc. </li>
+        </ul>
+        <h3>Additional:</h3>
+    <ul>
+        <li>Languages: English, Bulgarian, French</li>
+        <li>Strong Communication Skills acquired while working in multicultural environment </li>
+        <li>Leadership and Management Skills acquired at the University and  as intern in Sofia Security Forum</li>
+    </ul>
+    </div>
+{% endblock %}

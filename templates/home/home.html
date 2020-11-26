@@ -1,0 +1,46 @@
+{% extends 'shared/base.html' %}
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+{% endblock %}
+
+{% block title %}
+    AI Portal - Home
+{% endblock %}
+
+
+{% block content %}
+
+    <h1 id="animation_header" class="animate__animated animate__zoomIn">Welcome To AI Portal</h1>
+
+    <div class="main_container">
+        <h2 id="second_header" class="animate__animated animate__zoomIn">Explore The World of Artificial Intelligence With:</h2>
+
+        <section>
+            <div class="container">
+                <div class="background-img">
+                    <div class="box">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <div class="content">
+                            <ul>
+                                <li><a class="a_frame" href="{% url 'computer_vision_url' %}">Image Processing and CV</a></li>
+                                <li><a class="a_frame" href="{% url 'nlp_url' %}">Natural Language Processing</a></li>
+                                <li><a class="a_frame" href="{% url 'robotics_url' %}">Robotics and Hardware</a></li>
+                                <li><a class="a_frame" href="{% url 'models_home_url' %}">Our Models</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </div>
+
+{% endblock %}
