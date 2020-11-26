@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from django.core.exceptions import ValidationError
 from django.test import TestCase
 from NewsSection.forms import NewsForm
@@ -18,8 +17,4 @@ class TestValidator(TestCase):
             context = only_english_validator(txt=txt)
         self.assertTrue('Please Type in English' in context.exception)
 
-=======
-from django.test import TestCase
 
-# Create your tests here.
->>>>>>> 10c795f36d23a00f8ab4fec4346b45eac822fd47

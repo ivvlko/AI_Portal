@@ -1,5 +1,4 @@
 from django.contrib import admin
-<<<<<<< HEAD
 from NewsSection.models import News, Comment
 
 
@@ -15,9 +14,4 @@ class CommentsAdmin(admin.ModelAdmin):
 
 admin.site.register(News, NewsAdmin)
 admin.site.register(Comment, CommentsAdmin)
-=======
 
-from NewsSection.models import News
-
-admin.site.register(News)
->>>>>>> 10c795f36d23a00f8ab4fec4346b45eac822fd47

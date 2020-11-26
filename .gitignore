@@ -128,6 +128,9 @@ dmypy.json
 .idea
 .idea/
 
+ai-portal
+
+
 # Pyre type checker
 .pyre/
 
