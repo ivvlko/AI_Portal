@@ -20,4 +20,5 @@ urlpatterns = [
     path('user_news/', all_news_by_user_view, name='all_news_by_user_url'),
     path('update/<int:pk>', update_view, name='update_url'),
     path('delete/<int:pk>', delete_view, name='delete_url'),
+    ]
 
