@@ -11,15 +11,11 @@ class News(models.Model):
     choices = [['Computer Vision and Images', 'Computer Vision and Images'],
                ['Natural Language Processing', 'Natural Language Processing'],
                ['Robotics', 'Robotics'],
+               ['Hardware and Innovations', 'Hardware and Innovations']
+
                ]
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=50, validators=[only_english_validator])
-    text = models.TextField(max_length=3000, validators=[only_english_validator, MinLengthValidator(100)])
-
-               ['Hardware and Innovations', 'Hardware and Innovations']
-               ]
-
-    title = models.CharField(max_length=50)
     text = models.TextField(max_length=3000)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
 
