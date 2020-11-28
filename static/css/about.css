@@ -15,13 +15,16 @@ h2 {
 }
 
 #image_container {
-    display: inline-block;
-    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 5px;
+    left: 0;
+
 }
 
 div.container {
     display: inline-block;
-    margin-left: 300px;
+    margin-left: 5%;
 }
 
 #my_pic {
