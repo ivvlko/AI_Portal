@@ -14,11 +14,6 @@
 }
 
 
-.navbar.navbar-default {
-    background-color: #0f0d25;
-}
-
-
 div.dropdown-menu {
     background-color: #7FFFD4;
 }
@@ -27,10 +22,6 @@ div.dropdown-class {
     display: inline-block;
     margin: 5px;
     position: relative;
-}
-
-div.navbar-right {
-    margin-right: 5px;
 }
 
 
@@ -132,4 +123,18 @@ div.contacts {
 a{
     font-family: italic;
     color: whitesmoke;
+}
+
+.navbar-expand-lg{
+    background-color: #0f0d25;
+}
+
+button.navbar-toggler{
+    background-color: darkcyan;
+    margin-left: -1%;
+    padding: 1%;
+}
+
+#search{
+    padding-top: 5%;
 }

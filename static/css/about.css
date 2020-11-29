@@ -10,7 +10,7 @@ body {
 h2 {
     text-align: center;
     color: darkred;
-    padding: 10px;
+    padding: 2%;
     font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
 }
 
@@ -20,6 +20,11 @@ h2 {
     top: 5px;
     left: 0;
 
+}
+
+h4{
+    color: darkgoldenrod;
+    margin: 2%;
 }
 
 div.container {
@@ -36,6 +41,7 @@ div.container {
 
 h3 {
     color: gold;
+    margin: 2%;
 }
 
 p {

@@ -1,13 +1,20 @@
 {% load static %}
-<nav class="navbar navbar-default" id="nav">
-        <div class="navbar-left">
-            <a class="navbar-brand" href="{% url 'home_url' %}">
-                <img src="{% static 'pics/Robot-1320568045013231116.png' %}" width="60" height="60"
-                     alt="">
-            </a>
 
-            <a class="custom_nav_item" href="{% url 'home_url' %}">Home</a>
-            <div class="dropdown-class">
+<nav class="navbar navbar-expand-lg navbar-default">
+    <a class="navbar-brand" href="{% url 'home_url' %}"><img src="{% static 'pics/Robot-1320568045013231116.png' %}"
+                                                             width="60" height="60"
+                                                             alt=""></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>Menu
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'home_url' %}">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                    aria-haspopup="true" aria-expanded="false">
                     News
@@ -20,27 +27,34 @@
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="{% url 'all_news_url' %}">All</a>
                 </div>
-            </div>
-            <a class="custom_nav_item" href="{% url 'models_home_url' %}">AI Models</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'models_home_url' %}">AI Models</a>
+            </li>
+            <li>
+                <form id='search' class="form-inline my-2 my-lg-0" action="{% url 'search_url' %}" method='get'>
+                    <input name="search" class="form-control mr-sm-2" type="search" placeholder="Search"
+                           aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </li>
+        </ul>
 
-            <form class="form-inline my-2 my-lg-0" action="{% url 'search_url' %}" method='get'>
-                <input name="search" class="form-control mr-sm-2" type="search" placeholder="Search"
-                       aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-
-        </div>
-
-        <div class="navbar-right">
+        <ul id="right_ul" class="navbar-nav mr-auto">
             {% if request.user.is_superuser or request.user.is_staff %}
-                <a id="admin_button" class="custom_nav_item" href="{% url 'admin:index' %}">Admin</a>
+                <a id= "admin_button" class="nav-link" href="{% url 'admin:index' %}">Admin</a>
             {% endif %}
             {% if user.is_authenticated %}
-                <a class="custom_nav_item" href="{% url 'profile_url' %}">Profile</a>
-                <a id="logout_button" class="custom_nav_item" href="{% url 'logout_url' %}">Logout</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'profile_url' %}">Profile</a>
+                    <a class="nav-link" href="{% url 'logout_url' %}">Logout</a>
+                </li>
             {% else %}
-                <a class="custom_nav_item" href="{% url 'register_url' %}">Register</a>
-                <a class="custom_nav_item" href="{% url 'login_url' %}">Login</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'register_url' %}">Register</a>
+                    <a class="nav-link" href="{% url 'login_url' %}">Login</a>
+                </li>
             {% endif %}
-        </div>
+        </ul>
+    </div>
 </nav>

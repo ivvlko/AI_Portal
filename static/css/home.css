@@ -20,7 +20,7 @@ h3.section_h {
 
 div.main_container {
     position: relative;
-    margin-bottom: 220px;
+    margin-bottom: 320px;
 }
 
 li.animate__animated {
@@ -30,21 +30,7 @@ li.animate__animated {
     padding-top: 20px;
 }
 
-#animation_1 {
-    animation-delay: 1s;
-}
 
-#animation_2 {
-    animation-delay: 2s;
-}
-
-#animation_3 {
-    animation-delay: 3s;
-}
-
-#animation_4 {
-    animation-delay: 4s;
-}
 
 body {
 background-color: #242551;
