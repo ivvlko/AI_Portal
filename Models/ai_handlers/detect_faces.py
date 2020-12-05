@@ -1,4 +1,3 @@
-import cv2
 from PIL import Image
 import cv2
 from urllib.request import urlopen
@@ -20,5 +19,6 @@ def detect_faces(pic, strength):
         roi_color = image[y:y + h, x:x + w]
 
     rgb = Image.fromarray(image)
-    cv2.imwrite(f'static/processed/pic.jpg', image)
+    # cv2.imwrite(f'static/processed/pic.jpg', image)
+
     return rgb

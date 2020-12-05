@@ -27,3 +27,7 @@ class UserModel(models.Model):
     pickled_file = models.FileField(upload_to='binary_objects', validators=[validate_size, validate_ai_file_type])
     description = models.TextField(max_length=5000)
     sender = models.ForeignKey(User, on_delete=models.CASCADE)
+
+
+class ProcessedPictureMixin(models.Model):
+    processed_picture = models.ImageField(upload_to='processed_pictures')

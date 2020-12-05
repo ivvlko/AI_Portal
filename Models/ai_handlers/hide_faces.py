@@ -37,5 +37,6 @@ def cover_faces(faces, pic):
         cv2.imwrite(f'static/processed/pic2.jpg', pic)
         return pic
 
-    cv2.imwrite(f'static/processed/pic2.jpg', new_image)
+    # cv2.imwrite(f'static/processed/pic2.jpg', new_image)
     return new_image
+
