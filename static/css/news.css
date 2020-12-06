@@ -7,15 +7,16 @@ div.news_section{
 }
 
 img.img_section{
-    height: 250px;
+    height: 500px;
     width: 100%;
+    padding: 1%;
 
 }
 
 div.wrapper_section{
     display: inline-block;
-    width: 33%;
-    margin-left: 5%;
+    /*width: 51%;*/
+    margin-left: 10%;
     margin-right: 5%;
     margin-bottom: 1%;
     padding: 5%;
