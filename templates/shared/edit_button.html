@@ -1,4 +1,6 @@
-{% if user.is_authenticated and user == news.author %}
+{% load custom_tags %}
+
+{% if user.is_authenticated and user == news.author or request.user|has_group:'news_admin'%}
     <a href="{% url 'update_url' news.pk %}">
         <button class="btn btn-warning">Edit</button>
     </a>
