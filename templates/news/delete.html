@@ -1,5 +1,6 @@
 {% extends 'shared/base.html' %}
 {% load static %}
+{% load custom_tags %}
 {% block styles %}
     <link rel="stylesheet" href="{% static 'css/update_delete.css' %}">
 {% endblock %}
@@ -9,7 +10,7 @@
 {% endblock %}
 
 {% block content %}
-    {% if user == current.author and user.is_authenticated %}
+    {% if user == current.author and user.is_authenticated or request.user|has_group:'news_admin'%}
 
 
         <h1 id="delete_h">Are You Sure You Want To Delete: {{ current.title }}</h1>
