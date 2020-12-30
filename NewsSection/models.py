@@ -25,7 +25,7 @@ class News(models.Model):
 
 
 class Comment(models.Model):
-    name = models.CharField(max_length=50, validators=[only_english_validator])
+    name = models.ForeignKey(User, on_delete=models.CASCADE)
     comment = models.TextField(max_length=500, validators=[only_english_validator])
     news = models.ForeignKey(News, on_delete=models.CASCADE)
     date_posted = models.DateTimeField(default=django.utils.timezone.now)
