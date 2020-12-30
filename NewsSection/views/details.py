@@ -16,7 +16,7 @@ def details_view(request, pk):
     else:
         form = CommentForm(request.POST)
         if form.is_valid():
-            comment = Comment(name=request.user.username, comment=form.cleaned_data['comment'], news_id=pk)
+            comment = Comment(comment=form.cleaned_data['comment'], news_id=pk)
             comment.save()
             context = {
                 'current': current_news,
